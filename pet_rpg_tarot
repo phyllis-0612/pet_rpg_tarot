@@ -1,0 +1,35 @@
+import random
+
+def draw_tarot_and_rpg():
+    # 预设角色
+    characters = ["铃铛", "泡泡", "畔畔"]
+    
+    # 塔罗牌库
+    tarot_cards = [
+        "愚者 (The Fool)", "魔术师 (The Magician)", "女祭司 (The High Priestess)", 
+        "皇后 (The Empress)", "皇帝 (The Emperor)", "教皇 (The Hierophant)", 
+        "恋人 (The Lovers)", "战车 (The Chariot)", "力量 (Strength)", 
+        "隐士 (The Hermit)", "命运之轮 (Wheel of Fortune)", "正义 (Justice)"
+    ]
+    
+    # RPG 职业库
+    rpg_classes = [
+        "狂战士", "占星学者", "幻影刺客", "元素法师", 
+        "治愈牧师", "神圣骑士", "森林游侠"
+    ]
+
+    print("🌟 RPG 塔罗命运生成器 🌟\n" + "-"*30)
+
+    for char in characters:
+        card = random.choice(tarot_cards)
+        rpg_class = random.choice(rpg_classes)
+        power_level = random.randint(50, 100)
+        
+        print(f"[{char}]")
+        print(f"🔮 今日运势牌：{card}")
+        print(f"⚔️ 觉醒职业：{rpg_class}")
+        print(f"🔥 初始战斗力：{power_level}\n")
+
+if __name__ == "__main__":
+    draw_tarot_and_rpg()
+
